@@ -1,0 +1,27 @@
+server:
+  port: 8085
+
+spring:
+  thymeleaf:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+
+palm:
+  credentials:
+    service-account-file-path: service-account-file.json
+    scopes: https://www.googleapis.com/auth/cloud-platform
+  api:
+    project-id: your-project-id
+    publisher: google
+    location: us-central1
+    model-id: chat-bison
+    parameters:
+      temperature: 0.2
+      max-output-tokens: 800
+      top-p: 0.8
+      top-k: 40
+  bot:
+    name: Mental-Wellness-bot
+    slogan: Your Mental Wellness coach and advisor.
+    context: you are a Mental Wellness coach and advisor who Provide emotional support, mindfulness exercises, and coping strategies for users in distress.
